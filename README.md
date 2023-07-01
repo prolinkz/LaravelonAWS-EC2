@@ -47,10 +47,10 @@ Start Putty application, and write the ```User_Name @ Public DNS address or IP``
 <p> Apatche web server is amoung most popular web servers in the World, due its well-documented and has been in wide use much of the history of Web which makes it great choice for Server based web application.
 </p>
 <p>First,, we need to Update and Upgrade all the modules. For this, we have coomands for both</p>
-```
+'''
 sudo apt-get update
 sudo apt-get upgrade
-```
+'''
 
 -  <code> cp .env.example </code> &nbsp; <code> .env </code>
 - open: .env and update DB_DATABASE
