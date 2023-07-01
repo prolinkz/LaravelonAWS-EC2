@@ -18,16 +18,16 @@ Deploy Laravel application on EC2 Ubuntu Server with Apache, MySQL, PHP, PHPMyAd
 ### How to Run the AWS EC2 Instance
 
 Open AWS page, and navigate to >> Select services >> EC2 >> select Running Instances
-  1. Click on <code>Launch New Instance</code>
-    - Step 1: Amazon Machine : select Ubuntu of your range
-    - Step 2: Instane Type: Select
-    - Step 3: Add Storage of your range from
-    - Step 4:
-    - Step 5:
-    - Step 6:
-    - Step 7: Key Pair: Create New piar for each Instance and download it in .ppk file extionsion. If you downloaded in .pem file format, 
+1. Click on <code>Launch New Instance</code>
+  - Step 1: Amazon Machine : select Ubuntu of your range
+  - Step 2: Instane Type: Select
+  - Step 3: Add Storage of your range from
+  - Step 4:
+  - Step 5:
+  - Step 6:
+  - Step 7: Key Pair: Create New piar for each Instance and download it in .ppk file extionsion. If you downloaded in .pem file format, 
       it will be then convert into .ppk extension using "PUTTY gen" application.
-    - Final Step: Select **Launch Instance**.
+  - Final Step: Select **Launch Instance**.
 <br />
 Once done, check the Instance Status, if it work fine, you will find the _Public IP_, _Privete IP_, _Public DNS_, and the _Key Pair file_
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ecec9541-1e17-440f-b1d4-d0ac2d42209b)
