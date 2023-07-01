@@ -34,13 +34,14 @@ Once done, check the Instance Status, if it work fine, you will find the _Public
 
 <br />
 2. Connect Ubuntu Linux Server with SSH Terminal **PUTTY**
-Start Putty application, and write the ```User_Name @ Public DNS address or IP```.
-- The default user-name for Ubuntu server is *Ubuntu*. The full syntax would be as <code>ubuntu@DNS</code>
-![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5cf99bc3-89dc-44a9-b1e8-7027011ae29c)
+  - Start Putty application, and write the ```User_Name @ Public DNS address or IP```.
+  - The default user-name for Ubuntu server is *Ubuntu*. The full syntax would be as <code>ubuntu@DNS</code>
+    ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5cf99bc3-89dc-44a9-b1e8-7027011ae29c)
 
-- Atttach the .ppk file, under Configuration > Connection > SSH > Auth > Upload the **Private Key file** for Authentication.
-![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/2a343714-c8c5-4b04-98d8-55535d952a75)
-- Click OK to connect, if you get the console screen like, below with your serverDNS address, its means it's Working Fine.
+  - Atttach the .ppk file, under Configuration > Connection > SSH > Auth > Upload the **Private Key file** for Authentication.
+    ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/2a343714-c8c5-4b04-98d8-55535d952a75)
+
+  - Click OK to connect, if you get the console screen like, below with your serverDNS address, its means it's Working Fine.
   ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/6152bc94-3ad5-4adc-87ce-678d7515dfef)
 
 ### Installation of Apatche Server on Ubuntu Server
