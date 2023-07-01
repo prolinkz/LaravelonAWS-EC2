@@ -51,10 +51,34 @@ Once done, check the Instance Status, if it work fine, you will find the _Public
 </p>
 <p>First,, we need to Update and Upgrade all the modules. For this, we have coomands for both</p>
 
+- To Update the Modules
 ```
-- sudo apt-get update
-- sudo apt-get upgrade
+sudo apt-get update
 ```
+
+- To Upgrade the Modules
+```
+sudo apt-get upgrade
+```
+
+- To Install the zip/Unzip 
+```
+sudo apt install zip unzip
+```
+
+- To Install the Apache Server 
+```
+sudo apt install apache2
+```
+
+- To Restart the Apache Server 
+```
+sudo service apache2 restart
+```
+<p> To check whether the Apchae server is sussccfully installed or not. Copy the Public IP or ServerDNS address , and paste it into the brower to browe the server page. if it shows the page like below, its means the Apache server is Installed and running successfully!</p>
+
+### 3. Install the MySQL Server 
+
 
 -  <code> cp .env.example </code> &nbsp; <code> .env </code>
 - open: .env and update DB_DATABASE
