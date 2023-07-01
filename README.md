@@ -112,8 +112,27 @@ sudo mysql_secure_installation
 - Remove test database? : <code> press 'N' </code>
 - Reload Privilege tables now? : <code> press 'Y' </code>
 
-### 4. Install the PHP Server
+### 4. Install the PhpMyAdmin
+```
+sudo apt install phpmyadmin
+```
+- Press <code> Y </code>
+- select <code> apache </code> and press Enter
+ ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/d2932a7b-6332-4766-8d1b-5097485eecfc)
+- Press <code> Y </code> for Configuring PHPmyAdmin
+ ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/bc36ab3c-f404-49de-b94d-22b5df1f85c0)
+- Enter Password for PhpMyAdmin, and Confirm it
+ ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/e6cfc7ed-0ce8-4108-8fb3-fbd74be9a6c9)
 
+
+
+### 5. Install the PHP Server
+<p> PHP is Sript processing language. Its a component that process the code to display the dynamic content. It can Run scripts, content to the MySQL database to get information</p>
+
+<p> For PHP installation, enter the below command , it will install all the PHP modules</p>
+```
+sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli
+```
 
 
 
