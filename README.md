@@ -19,13 +19,13 @@ Deploy Laravel application on EC2 Ubuntu Server with Apache, MySQL, PHP, PHPMyAd
 
 Open AWS page, and navigate to >> Select services >> EC2 >> select Running Instances
   1. Click on <code>Launch New Instance</code>
-    - Step 1: Amazon Machine : select Ubuntu of your range
-    - Step 2: Instane Type: Select
-    - Step 3: Add Storage of your range from
-    - Step 4:
-    - Step 5:
-    - Step 6:
-    - Step 7: Key Pair: Create New piar for each Instance and download it in .ppk file extionsion. If you downloaded in .pem file format, 
+  - Step 1: Amazon Machine : select Ubuntu of your range
+  - Step 2: Instane Type: Select
+  - Step 3: Add Storage of your range from
+  - Step 4:
+  - Step 5:
+  - Step 6:
+  - Step 7: Key Pair: Create New piar for each Instance and download it in .ppk file extionsion. If you downloaded in .pem file format, 
       it will be then convert into .ppk extension using "PUTTY gen" application.
     - Final Step: Select **Launch Instance**.
 <br />
