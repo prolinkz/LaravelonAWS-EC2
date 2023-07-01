@@ -52,8 +52,8 @@ Once done, check the Instance Status, if it work fine, you will find the _Public
 <p>First,, we need to Update and Upgrade all the modules. For this, we have coomands for both</p>
 
 ```
-sudo apt-get update
-sudo apt-get upgrade
+- sudo apt-get update
+- sudo apt-get upgrade
 ```
 
 -  <code> cp .env.example </code> &nbsp; <code> .env </code>
