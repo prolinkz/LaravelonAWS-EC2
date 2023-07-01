@@ -29,7 +29,8 @@ Open AWS page, and navigate to >> Select services >> EC2 >> select Running Insta
       it will be then convert into .ppk extension using "PUTTY gen" application.
   - Final Step: Select **Launch Instance**.
 <br />
-Once done, check the Instance Status, if it work fine, you will find the _Public IP_, _Privete IP_, _Public DNS_, and the _Key Pair file_
+<p>Once done, check the Instance Status, if it work fine, you will find the __Public IP__, __Privete IP__, __Public DNS__, and the __Key Pair file__   </p>
+
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ecec9541-1e17-440f-b1d4-d0ac2d42209b)
 
 <br />
@@ -75,9 +76,46 @@ sudo apt install apache2
 ```
 sudo service apache2 restart
 ```
-<p> To check whether the Apchae server is sussccfully installed or not. Copy the Public IP or ServerDNS address , and paste it into the brower to browe the server page. if it shows the page like below, its means the Apache server is Installed and running successfully!</p>
+<p> To check whether the Apchae server is sussccfully installed or not. Copy the Public IP or ServerDNS address , and paste it into the brower to browe the server page. 
+
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ba625c14-42d8-4498-b168-1e0db206b7f2)
+</p>
+
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ba625c14-42d8-4498-b168-1e0db206b7f2)
+
+<p>if it shows the page like below, its means the Apache server is Installed and running successfully!
+
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/e82752b8-1f5b-43e5-9104-20163a459d5a)
+
+</p>
+
 
 ### 3. Install the MySQL Server 
+<p> MySQL is the database management service which is used where we store and access the information</p>
+- To Install the MySQL Server 
+```
+sudo apt install mysql-server
+```
+<p> When you run this, command, it will show some of the packages need to be installed and configured. Enter 'Y' for Yes, to continoue.</p>
+
+<p> Once SQL Server is installed, we have set the Root Password, for which we use the below command;</p>
+- To set the MySQL Server Root Password 
+```
+sudo mysql_secure_installation
+```
+- Enter <code> Y </code> for Yes
+- Password Strength: Enter <code>0 for Low</code>, <code>1 for Medium level</code>, or <code>2 for High secure</code> password.
+- New Password: Now 'Enter & Re-enter' your New password for the Root User.
+- If the password strength is OK, to Continue : <code> press 'Y' </code>
+- Remove anonymous User? : <code> press 'Y' </code>
+- Disallow Root Login remotely? : <code> press 'N' </code>
+- Remove test database? : <code> press 'N' </code>
+- Reload Privilege tables now? : <code> press 'Y' </code>
+
+### 4. Install the PHP Server
+
+
+
 
 
 -  <code> cp .env.example </code> &nbsp; <code> .env </code>
