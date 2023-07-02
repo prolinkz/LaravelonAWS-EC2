@@ -268,16 +268,16 @@ php -v
 - through Filezilla 
 
 <p> We will use FileZilla ftp protocol approach.</p>
--open the FileZilla applicaion.
-- Under the File menu, select Site Manager
+open the FileZilla applicaion.
+- Under the File menu, select 'Site Manager'
 - create new site and Enter the credientials
-  - Protocol: FTP - File Transfer Protocol
-  - Host: Ubuntu Public DNS address
-  - Port: 22
-  - Logon type: Key file
-  - User: Ubuntu
-  - Key file: Upload the Key file of Instance
-  - Click 'Connect'
+ - Protocol: SFTP - SSH File Transfer Protocol
+ - Host: Ubuntu Public DNS address
+ - Port: 22
+ - Logon type: Key file
+ - User: Ubuntu
+ - Key file: Upload the Key file of Instance
+ - Click 'Connect'
   
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5ae671dd-def3-4192-903b-c4755c1cb773)
 
