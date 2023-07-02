@@ -124,8 +124,49 @@ sudo apt install phpmyadmin
 - Enter Password for PhpMyAdmin, and Confirm it
  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/e6cfc7ed-0ce8-4108-8fb3-fbd74be9a6c9)
 
+<P> When it done. check to browse the /phpmyadmin dashboard</P>
 
 
+```
+http://server-IP/phpmyadmin
+```
+<p>if the URL request gave an *** Not Found *** message, then run the below command, to change the configuration;</p>
+
+```
+sudo nano /etc/apache2/apache2.conf
+```
+<p>We will get the page like below;</p>
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/31458f0f-4e95-482c-9baf-4945b006c5a9)
+
+<p> come to the bottom of the console page, and write the below configuration path to include </p>
+
+```
+include /etc/phpmyadmin/apache.conf
+```
+
+<p> To Save the above configuration file, 
+  - Press Ctrl + X to save
+  - Press <code> Y </code> for Yes, and 
+  - Press <code> Enter </code>.
+
+<p> Now the phpmyAdmin configuration has been changed, Try to run the modules Update and Upgrade commands.
+
+  ```
+sudo apt update
+sudo apt-get upgrade
+```
+We also restart the Apache server using 
+  
+```
+sudo service apache2 restrat
+```
+
+once restart, try to browse the /phpmyAdmin dashboard (ec2-18-191--us-east-2-compute-amazonaws.com***/phpmyadmin***/)
+    
+</p>
+
+  
 ### 5. Install the PHP Server
 <p> PHP is Sript processing language. Its a component that process the code to display the dynamic content. It can Run scripts, content to the MySQL database to get information</p>
 
