@@ -167,10 +167,45 @@ We also restart the Apache server using
 sudo service apache2 restrat
 ```
 
-once restart, try to browse the /phpmyAdmin dashboard (ec2-18-191--us-east-2-compute-amazonaws.com/phpmyadmin/)
+once restart, try to browse the [/phpmyAdmin](ec2-18-191--us-east-2-compute-amazonaws.com/phpmyadmin/)
+
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ed285edc-c1c6-47ef-8ab4-39532d0bb392)
 
-    
+if you forget the user-name or password, use the command to check ;
+```
+sudo nano /etc/phpmyadmin/config-db.php
+```
+press Enter, and you will find all the information.
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ce4726fe-c90c-458f-ae13-580532e96524)
+
+Now try to login into /phpmyadmin
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/6aa47b14-3e04-4058-84cb-e1e192ce0ea3)
+
+Now create a database, to check whether its working or having issue with the <code> Privileges </code>, like below 
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/a9736eaf-85a4-4538-9a65-045f9639a748)
+
+if the Privileges error coming, the goto the Terminal, and write the command <code> sudo mysql </code> press <b> Enter </b>. The path will selected of mysql directory.
+Now run the privileges permission grant to the user, using below command
+
+```
+mysql> grant all on *.* to phpmyadmin@localhost; 
+```
+Now flush/restart the privileges; 
+```
+mysql> flush privileges;
+```
+
+then use the <code> exit; </code> command to return to the Ubuntu server main directory
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/592f267d-af92-4ed8-ba19-6c4a969306de)
+
+Now Logout and logIn again to the phpmyadmin dashboard, and you will find the Privileges would assigned, and the database will be able to create, like below;
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/6e96e27d-b868-4adf-a434-19a09725af10)
+
+
+
 </p>
 
   
@@ -178,16 +213,89 @@ once restart, try to browse the /phpmyAdmin dashboard (ec2-18-191--us-east-2-com
 <p> PHP is Sript processing language. Its a component that process the code to display the dynamic content. It can Run scripts, content to the MySQL database to get information</p>
 
 <p> For PHP installation, enter the below command , it will install all the PHP modules</p>
+
 ```
-sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli
+sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear php-mysql php-gettext php-crul php-memcached php-xdebug php-intl php-fpm php-pgsql php imap 
+```
+- Press <code> Y </code> to install all the PHP modules.
+
+Once the PHP installed, check it version using 
+```
+php -v
 ```
 
+<p> Now the PHP is installed on the AWS server, let's Upload the LAravel Project, before uploading <b> Update </b> all the modules using <code> sudo apt-get update </code> and <b> restart </b> the Apache Server using <code> sudo service apache2 restart </code>
+
+</p>
+
+### 6. Deploy Laravel Project on Server
+<p> We can upload the Laravel application to the aws server, using Two approaches; </p>
+- Using GitHUB
+- through Filezilla 
+
+<p> We will use FileZilla ftp protocol approach.</p>
+-open the FileZilla applicaion.
+- Under the File menu, select Site Manager
+- create new site and Enter the credientials
+  - Protocol: FTP - File Transfer Protocol
+  - Host: Ubuntu Public DNS address
+  - Port: 22
+  - Logon type: Key file
+  - User: Ubuntu
+  - Key file: Upload the Key file of Instance
+  - Click 'Connect'
+  
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5ae671dd-def3-4192-903b-c4755c1cb773)
+
+<p> Once FTP server connected, Navigate to the web directory, have path root of <code> /Var/www/html </code>
+
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/edff9638-d5d1-4267-b7f0-984de5f78d4e)
+
+<p> The root file already the default index.html page, we need to delete this page. If you got the Error of <b>Permission denied</b> message, uon file deletion ,this occcurs because of Root Owner user will be Root, but our user-name is Ubuntu. 
+  
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/432341a0-2c2a-4a23-bd74-233ff14a41a1)
+
+So we need to change the Owner name from 'root' to 'ubuntu'. The command to change the HTML directory ownership is as under; 
+```
+sudo chown -R ubuntu /var/www/html
+```
+-Pess Enter
+- Refresh the FileZilla application, and the HTML directory Ownership will be changed, like as under;
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/4904f99b-613d-4394-9e4a-0de4a35620d4)
+
+
+Now try again to Delete the 'index.html' file from the HTML direcotry, and it will removed.
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/d1afae01-2123-4d96-8970-5d88e24a741f)
+
+It's time to uploade the LAravel project Zip file to the server using FileZilla. Drap the project zip file and drop under Filezilla, and it will uploaded;
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/2b21e82f-2558-488c-9072-47a7d86f5bce)
+
+We now need to Unzip the project folder, Goto the terminal and navigate to the HTML directory,;
+- Navigate to main directory: <code> cd / </code>
+- Enter to VAr directory: <code> cd var </code>
+- Enter to www directory: <code> cd www </code>
+- Enter to HTML directory: <code> cd html </code>
+- Now Unzip the Project file, using command
+  ```
+  unzip projectfile.zip
+  ```
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/8b1e207b-e5f8-4894-9f7f-65553368177c)
+
+Once Done, let browse the project using /public directory with url, like http://awsserverDNS/public
+
+if it gave an Error of Storage permission, then navigatge to the Storage directory under the projet directory in FileZilla, right-click on Storage folder and Select the Permission to Addd the Write Permission for the Storage directory.
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/9ea4c4b5-212c-45ee-addd-16578d996754)
+
+Now goto Terminal , and run the command to change the 777 permission 
+```
+sudo chmod -R 777 storage
+```
+
+Again Refresh the Proect file in FileZilla, and browse the project page [serverDNS](/public)
+
+</p>
 
 
 
--  <code> cp .env.example </code> &nbsp; <code> .env </code>
-- open: .env and update DB_DATABASE
-- run: <code> composer install </code>
-- run: <code> php artisan key:generate </code>
-- run: <code> php artisan migrate:fresh --seed </code>  <a href="https://laravel.com/docs/10.x/migrations" alt="migration commands">migration commands </a>
-- run: <code> php artisan serve </code>
+</p>
+
