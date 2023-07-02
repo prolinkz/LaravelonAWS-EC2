@@ -93,16 +93,20 @@ sudo service apache2 restart
 ### 3. Install the MySQL Server 
 <p> MySQL is the database management service which is used where we store and access the information</p>
 - To Install the MySQL Server 
+
 ```
 sudo apt install mysql-server
 ```
-<p> When you run this, command, it will show some of the packages need to be installed and configured. Enter 'Y' for Yes, to continoue.</p>
+
+<p> When you run this, command, it will show some of the packages need to be installed and configured. Enter <code> Y </code> for Yes, to continoue.</p>
 
 <p> Once SQL Server is installed, we have set the Root Password, for which we use the below command;</p>
+
 - To set the MySQL Server Root Password 
 ```
 sudo mysql_secure_installation
 ```
+
 - Enter <code> Y </code> for Yes
 - Password Strength: Enter <code>0 for Low</code>, <code>1 for Medium level</code>, or <code>2 for High secure</code> password.
 - New Password: Now 'Enter & Re-enter' your New password for the Root User.
@@ -113,6 +117,7 @@ sudo mysql_secure_installation
 - Reload Privilege tables now? : <code> press 'Y' </code>
 
 ### 4. Install the PhpMyAdmin
+
 ```
 sudo apt install phpmyadmin
 ```
@@ -146,9 +151,9 @@ include /etc/phpmyadmin/apache.conf
 ```
 
 <p> To Save the above configuration file, 
-  - Press Ctrl + X to save
-  - Press <code> Y </code> for Yes, and 
-  - Press <code> Enter </code>.
+  - Press <code> Ctrl + X </code> to save
+  - Press <code> Y </code> for Yes - update it, and 
+  - Press <code> Enter </code> to save.
 
 <p> Now the phpmyAdmin configuration has been changed, Try to run the modules Update and Upgrade commands.
 
@@ -162,7 +167,9 @@ We also restart the Apache server using
 sudo service apache2 restrat
 ```
 
-once restart, try to browse the /phpmyAdmin dashboard (ec2-18-191--us-east-2-compute-amazonaws.com***/phpmyadmin***/)
+once restart, try to browse the /phpmyAdmin dashboard (ec2-18-191--us-east-2-compute-amazonaws.com/phpmyadmin/)
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ed285edc-c1c6-47ef-8ab4-39532d0bb392)
+
     
 </p>
 
