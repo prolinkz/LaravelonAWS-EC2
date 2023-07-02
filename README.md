@@ -281,28 +281,28 @@ open the FileZilla applicaion.
  - Key file: Upload the Key file of Instance
  - Click 'Connect'
 
- ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/a5f8af39-3961-489d-9bd2-55bed1b71f61)
-
 
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/1aad6697-01da-4499-b4ee-78f8a9668e70)
 
-  
-![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5ae671dd-def3-4192-903b-c4755c1cb773)
 
 <p> Once FTP server connected, Navigate to the web directory, have path root of <code> /Var/www/html </code>
 
   ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/edff9638-d5d1-4267-b7f0-984de5f78d4e)
 
-<p> The root file already the default index.html page, we need to delete this page. If you got the Error of <b>Permission denied</b> message, uon file deletion ,this occcurs because of Root Owner user will be Root, but our user-name is Ubuntu. 
+<p> The root file already the default index.html page, we need to delete this page. If you got the Error of <b>Permission denied</b> message, When we delete a file, 
   
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/432341a0-2c2a-4a23-bd74-233ff14a41a1)
 
-So we need to change the Owner name from 'root' to 'ubuntu'. The command to change the HTML directory ownership is as under; 
+This is becuase, the Root Ownership Group permission is assigned to the 'root' , instead of 'ubuntu', but our user-name is Ubuntu.
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/7d8457a1-5506-441f-afc6-cec33b1054e9)
+
+So we need to change the Owner name from <Code> root </code> to <code> ubuntu </code>. The command to change the HTML directory ownership is as under; 
+
 ```
 sudo chown -R ubuntu /var/www/html
 ```
--Pess Enter
-- Refresh the FileZilla application, and the HTML directory Ownership will be changed, like as under;
+ - Pess Enter
+ - Refresh the FileZilla application, and the HTML directory Ownership will be changed, like as under;
   ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/4904f99b-613d-4394-9e4a-0de4a35620d4)
 
 
