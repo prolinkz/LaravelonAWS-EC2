@@ -263,14 +263,16 @@ php -v
 </p>
 
 ### 6. Deploy Laravel Project on Server
+
 <p> We can upload the Laravel application to the aws server, using Two approaches; </p>
+
 - Using GitHUB
 - through Filezilla 
 
 <p> We will use FileZilla ftp protocol approach.</p>
 open the FileZilla applicaion.
-- Under the File menu, select 'Site Manager'
-- create new site and Enter the credientials
+ - Under the File menu, select 'Site Manager'
+ - create new site and Enter the credientials
  - Protocol: SFTP - SSH File Transfer Protocol
  - Host: Ubuntu Public DNS address
  - Port: 22
@@ -278,6 +280,12 @@ open the FileZilla applicaion.
  - User: Ubuntu
  - Key file: Upload the Key file of Instance
  - Click 'Connect'
+
+ ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/a5f8af39-3961-489d-9bd2-55bed1b71f61)
+
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/1aad6697-01da-4499-b4ee-78f8a9668e70)
+
   
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/5ae671dd-def3-4192-903b-c4755c1cb773)
 
