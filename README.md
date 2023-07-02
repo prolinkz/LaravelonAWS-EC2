@@ -196,7 +196,7 @@ sudo apt-get upgrade
 We also restart the Apache server using 
   
 ```
-sudo service apache2 restrat
+sudo service apache2 restart
 ```
 
 we can have other options for apache2 services, like to <code> Start </code>, <code> Stop </code>, <code> Restart </code>, <code> Reload </code>
