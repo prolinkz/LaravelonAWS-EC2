@@ -98,9 +98,37 @@ sudo service apache2 restart
 sudo apt install mysql-server
 ```
 
-<p> When you run this, command, it will show some of the packages need to be installed and configured. Enter <code> Y </code> for Yes, to continoue.</p>
+<p> When you run this, command, it will show some of the packages need to be installed and configured. Enter <code> Y </code> for Yes, to continue.</p>
+#### Running mysql_secure_installation
 
-<p> Once SQL Server is installed, we have set the Root Password, for which we use the below command;</p>
+<p>Before <b> July, 2022 </b> we directly use <code> mysql_secure_installation </code> for creating Password of MySQL Server, but <b> later on July, 2022 version </b> we will got error while creating password for a user 'root'@'localhost', as shown below ;
+
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/2c83fe1c-f8b2-43dc-9528-e0c77a819604)
+
+
+we need to make run configuration command  before running the mysql_secure_installtion, for that we first need to; </p>
+- Enter to mysql directory, using
+
+```
+sudo mysql
+```
+once you enter to mysql> , then run the coomand for root@localhost
+```
+alter user root@localhost identified with mysql_native_password by 'Your-Password';
+```
+<p>You will find it works, now flush the privileges using command</p>
+
+```
+flush privileges;
+```
+<p> When privileges flushed, now exit from <code> mysql> </code>code> directory using exit command </p>
+
+```
+exit;
+```
+The path will be directed to the Ubuntu server, now run the my_secure_installation command for setting the Root password
+
+<p> Once SQL Server is installed, we have set the MySQL swerver Root Password, for which we use the below command;</p>
 
 - To set the MySQL Server Root Password 
 ```
