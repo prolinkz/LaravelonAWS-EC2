@@ -199,6 +199,8 @@ We also restart the Apache server using
 sudo service apache2 restrat
 ```
 
+we can have other options for apache2 services, like to <code> Start </code>, <code> Stop </code>, <code> Restart </code>, <code> Reload </code>
+
 once restart, try to browse the [/phpmyAdmin](ec2-18-191--us-east-2-compute-amazonaws.com/phpmyadmin/)
 
 ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/ed285edc-c1c6-47ef-8ab4-39532d0bb392)
