@@ -126,7 +126,7 @@ flush privileges;
 ```
 exit;
 ```
-The path will be directed to the Ubuntu server, now run the my_secure_installation command for setting the Root password
+The path will be directed to the Ubuntu server, now it time to run <code> my_secure_installation </code> command for setting the Root password.
 
 <p> Once SQL Server is installed, we have set the MySQL swerver Root Password, for which we use the below command;</p>
 
@@ -143,6 +143,10 @@ sudo mysql_secure_installation
 - Disallow Root Login remotely? : <code> press 'N' </code>
 - Remove test database? : <code> press 'N' </code>
 - Reload Privilege tables now? : <code> press 'Y' </code>
+
+Once we get the message 'All Done!', it means the MySQL server has beeen installed successfully, like shown below;
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/7ea8baf2-0759-4de1-bb9f-caa2cd73c159)
+
 
 ### 4. Install the PhpMyAdmin
 
