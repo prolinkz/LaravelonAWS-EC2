@@ -337,7 +337,32 @@ Again Refresh the Proect file in FileZilla, and browse the project page [serverD
 
 </p>
 
+</p>
+
+
+
+<br />
+<br />
+<br />
+
+<p> if you get an error of GE Method Not Supported, Supported Methosd is Head. 
+  
+  ![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/e0e9cc98-1c08-470d-ad69-ea74e3b59979)
+
+  then 
+  - either try to change the route path from GET method to PUT, or POST. 
+  - IF the above method didn't works, then try to Install the Composer, using command
+
+  ```
+sudo apt-get 
+```
+ - Press 'Y' and Enter
+ - 
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/611f603f-3de7-4aa9-9d85-fd6678300a0f)
+
+
+![image](https://github.com/prolinkz/LaravelonAWS-EC2/assets/45316278/627e7c13-7e98-435d-a2d6-fcba44e5dad1)
+
 
 
 </p>
-
